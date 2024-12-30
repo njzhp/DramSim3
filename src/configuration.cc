@@ -31,7 +31,7 @@ Config::Config(std::string config_file, std::string out_dir)
 }
 
 /**
-    hex_addr >>= shift_bits;  // Shift the address right by the number of bits specified in shift_bits
+    地址映射函数：将地址映射到 DRAM 的通道、rank、bankgroup、bank、row 和 column
  * 
  * @param hex_addr The hexadecimal address to be mapped.
  * @return Address The mapped DRAM address containing channel, rank, bank group, bank, row, and column.
@@ -253,7 +253,13 @@ void Config::InitSystemParams() {
     return;
 }
 
-#ifdef THERMAL
+#ifdef THERMAL 
+'''
+    如果 THERMAL 宏已经被定义
+    那么 #ifdef THERMAL 后面的代码将被编译器包含在最终的编译范围内
+    会被正常编译
+    否则这段代码将被忽略
+'''
 void Config::InitThermalParams() {
     const auto& reader = *reader_;
     const_logic_power = reader.GetReal("thermal", "const_logic_power", 5.0);
@@ -350,6 +356,7 @@ void Config::InitTimingParams() {
     return;
 }
 
+// 初始化地址映射
 void Config::SetAddressMapping() {
     // memory addresses are byte addressable, but each request comes with
     // multiple bytes because of bus width, and burst length
@@ -401,6 +408,7 @@ void Config::SetAddressMapping() {
     ro_pos = field_pos.at("ro");
     co_pos = field_pos.at("co");
 
+    // 掩码：用于提取地址中的特定字段
     ch_mask = (1 << field_widths.at("ch")) - 1;
     ra_mask = (1 << field_widths.at("ra")) - 1;
     bg_mask = (1 << field_widths.at("bg")) - 1;
