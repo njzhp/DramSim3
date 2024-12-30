@@ -4,6 +4,9 @@
 #include <unordered_set>
 #include <sys/stat.h>
 
+/*
+实现了DRAM模拟器中的一些基础工具函数和操作符重载
+*/
 namespace dramsim3 {
 
 std::ostream& operator<<(std::ostream& os, const Command& cmd) {

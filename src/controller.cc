@@ -3,6 +3,10 @@
 #include <iostream>
 #include <limits>
 
+/*
+模拟内存控制器
+实现内存控制器的命令处理 统计数据更新 热能计算
+*/
 namespace dramsim3 {
 
 #ifdef THERMAL

@@ -2,6 +2,11 @@
 #include <algorithm>
 #include <utility>
 
+/*
+定义和管理各种内存命令之间的时间约束和依赖关系
+实现内存控制器中的时序逻辑 确保不同命令按照 DRAM 规范中的时序要求正确执行 
+以模拟真实内存系统的行为和性能
+*/
 namespace dramsim3 {
 
 Timing::Timing(const Config& config)

@@ -1,5 +1,16 @@
 #include "cpu.h"
 
+/*
+1. RandomCPU（随机 CPU）
+RandomCPU 适用于评估内存系统在高并发、随机访问情况下的稳定性和性能
+
+2. StreamCPU（流式 CPU）
+StreamCPU 则用于测试顺序访问模式下的带宽和缓存优化效果
+
+3. TraceBasedCPU（基于跟踪的 CPU）
+TraceBasedCPU 则通过模拟真实应用的内存访问模式，提供更为精准的性能评估。
+*/
+
 namespace dramsim3 {
 
 void RandomCPU::ClockTick() {
