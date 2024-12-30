@@ -5,6 +5,10 @@
 #ifdef THERMAL
 #include <math.h>
 #endif  // THERMAL
+  
+// 初始化文件，从ini文件读取配置信息并存入参数
+// 定义地址映射函数
+// 定义Config类
 
 namespace dramsim3 {
 

@@ -4,6 +4,19 @@
 
 using namespace dramsim3;
 
+/**
+ * @file main.cc
+ * @brief Main entry point for the DRAM Simulator.
+ *
+ * This file contains the main function which sets up the argument parser,
+ * processes command line arguments, and runs the DRAM simulation based on
+ * the provided configuration and options.
+ *
+ * Usage examples:
+ * ./build/dramsim3main configs/DDR4_8Gb_x8_3200.ini -c 100 -t sample_trace.txt
+ * ./build/dramsim3main configs/DDR4_8Gb_x8_3200.ini -s random -c 100
+ */
+
 int main(int argc, const char **argv) {
     args::ArgumentParser parser(
         "DRAM Simulator.",

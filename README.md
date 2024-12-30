@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 [![Build Status](https://travis-ci.com/umd-memsys/DRAMsim3.svg?branch=master)](https://travis-ci.com/umd-memsys/DRAMsim3)
 
 # About DRAMsim3
@@ -157,6 +156,3 @@ other Verilog simulators may require a slightly different format.
 
 [6] Li, S. (2019). Scalable and Accurate Memory System Simulation (Doctoral dissertation).
 
-=======
-# DramSim3
->>>>>>> 75ee170298f256887bb072bd3378f8ca9f769523
